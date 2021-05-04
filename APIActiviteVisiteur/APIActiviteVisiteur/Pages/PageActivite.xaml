@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APIActiviteVisiteur.Pages.PageActivite">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lvActivites" ItemSelected="lvActivites_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal" HeightRequest="100">
+                                    <Label x:Name="lblLieuActivite" VerticalOptions="Center" HorizontalOptions="Center"
+                                               WidthRequest="80" FontSize="20"
+                                               Text="{Binding Lieu}"></Label>
+                                    <Label x:Name="lblThemeActivite" WidthRequest="200" VerticalOptions="Center" FontSize="20"
+                                               Text="{Binding Theme}"></Label>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Orientation="Horizontal">
+                <Button HorizontalOptions="Center" Text="Ajouter" x:Name="btnAjouter" Clicked="btnAjouter_Clicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
