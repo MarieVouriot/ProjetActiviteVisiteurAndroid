@@ -18,13 +18,16 @@ namespace APIActiviteVisiteur
 
         private async void btnActivite_Clicked(object sender, EventArgs e)
         {
+            // PageActivite qui s'ouvre
             PageActivite page = new PageActivite();
             await Navigation.PushModalAsync(new NavigationPage(page));
         }
 
-        private void btnRapport_Clicked(object sender, EventArgs e)
+        private async void btnRapport_Clicked(object sender, EventArgs e)
         {
-
+            // PageRapport qui s'ouvre
+            PageRapport page = new PageRapport();
+            await Navigation.PushModalAsync(new NavigationPage(page));
         }
     }
 }

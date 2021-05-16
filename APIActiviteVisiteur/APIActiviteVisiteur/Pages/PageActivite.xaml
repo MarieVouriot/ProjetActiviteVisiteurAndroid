@@ -9,11 +9,14 @@
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View>
-                                <StackLayout Orientation="Horizontal" HeightRequest="100">
+                                <StackLayout Orientation="Horizontal" >
+                                    <Label x:Name="lblDateActivite" VerticalOptions="Center" HorizontalOptions="Center"
+                                               WidthRequest="100" FontSize="15"
+                                               Text="{Binding Date}"></Label>
                                     <Label x:Name="lblLieuActivite" VerticalOptions="Center" HorizontalOptions="Center"
-                                               WidthRequest="80" FontSize="20"
+                                               WidthRequest="100" FontSize="15"
                                                Text="{Binding Lieu}"></Label>
-                                    <Label x:Name="lblThemeActivite" WidthRequest="200" VerticalOptions="Center" FontSize="20"
+                                    <Label x:Name="lblThemeActivite" WidthRequest="200" VerticalOptions="Center" FontSize="15"
                                                Text="{Binding Theme}"></Label>
                                 </StackLayout>
                             </ViewCell.View>
@@ -21,8 +24,12 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Label>Theme de l'activité</Label>
+            <Entry x:Name="txtThemeActi"></Entry>
+            <Label>Lieu de l'activité</Label>
+            <Entry x:Name="txtLieuActi"></Entry>
             <StackLayout Orientation="Horizontal">
-                <Button HorizontalOptions="Center" Text="Ajouter" x:Name="btnAjouter" Clicked="btnAjouter_Clicked"></Button>
+                <Button HorizontalOptions="CenterAndExpand" Text="Modifier" x:Name="btnModifier" Clicked="btnModifier_Clicked"></Button>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
