@@ -24,7 +24,7 @@ namespace APIActiviteVisiteur.Pages
 
         protected override async void OnAppearing()
         {
-            // Affichage de activités dans la listView
+            // Affichage des activités dans la listView
             base.OnAppearing();
             List<Activite> lesActivites = new List<Activite>();
 
@@ -38,7 +38,7 @@ namespace APIActiviteVisiteur.Pages
 
         private void lvActivites_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            // Lieu et thème de l'activité sélectionnée s'affiche dans les Entry
+            // Lieu et thème de l'activité sélectionnée s'affichent dans les Entry
             if(lvActivites.SelectedItem != null)
             {
                 txtLieuActi.Text = (lvActivites.SelectedItem as Activite).Lieu;
